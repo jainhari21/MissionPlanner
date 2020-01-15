@@ -1705,8 +1705,7 @@ namespace MissionPlanner
                     return;
                 }
 
-                if (getparams)
-                    comPort.getParamList();
+                comPort.getParamListAsync(comPort.MAV.sysid, comPort.MAV.compid);
 
                 _connectionControl.UpdateSysIDS();
 
